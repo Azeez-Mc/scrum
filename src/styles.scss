@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    .rectangle{
+        padding: 15px;
+        border: 1px solid black;
+        margin: 15px;
+        cursor: pointer;
+    }
+}
+
+small {
+    color: rgb(228, 5, 5);
+    font-size: 12px;
+}

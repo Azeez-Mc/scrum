@@ -1,0 +1,15 @@
+<div class="container">
+    <header>
+        <button class="p-2 m-3 bg-dark text-white" (click)="addStory()">Add Story</button>
+        <button class="p-2 m-3 bg-dark text-white" routerLink="/calculateSprint">calculate sprint</button>
+    </header>
+    <div class="main" >
+        <div class="rectangle" *ngFor ="let data of taskList">
+            <h4>{{data.story}}</h4>
+            <h6>Point : {{data.point}}</h6>
+        </div>
+
+        <div *ngIf="!taskList" class="noData">No Stories Found</div>
+        
+    </div>
+</div>

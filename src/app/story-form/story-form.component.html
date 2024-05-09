@@ -1,0 +1,16 @@
+<div class="container">
+   <form [formGroup]="submitForm">
+        <input type="text" class="m-3 p-1 w-100" placeholder="Story Name" formControlName="story">
+        <div  *ngIf="formValidation['story'].errors && isSubmitted">
+            <small *ngIf="formValidation['story'].errors?.required">Story name required</small>
+        </div>
+        <input type="number" max="5" min="1" class="m-3 p-1 w-100" placeholder="Story Point" formControlName="point">
+        <div *ngIf="formValidation['point'].errors && isSubmitted">
+            <small *ngIf="formValidation['point'].errors?.required">Story Point required</small>
+            <small *ngIf="formValidation['point'].errors?.max || formValidation['point'].errors?.min">Story Point should be 1 - 5</small>
+        </div>
+        <button class="w-100 p-1 m-3 bg-dark text-white" type="submit" (click)="onSubmit()">ADD STORY</button>
+   </form>
+   
+
+</div>
