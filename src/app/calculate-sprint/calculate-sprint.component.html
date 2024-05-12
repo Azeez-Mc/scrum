@@ -2,9 +2,9 @@
     <form [formGroup] = "sprintForm">
         <input type="number" class="m-3 p-1 w-100" placeholder="Sprint Point" formControlName="sprint">
 
-        <button class="w-100 p-1 m-3 bg-dark text-white" type="submit" (click)="checkSprint()">Auto Selected Stories</button>
+        <button class="w-100 p-1 m-3 bg-dark text-white" type="submit" (click)="checkSprint('create')">Auto Selected Stories</button>
         <button class="w-100 p-1 m-3 bg-dark text-white" type="submit" (click)="clearStories()">Clear Stories</button>
-        <button class="w-100 p-1 m-3 bg-dark text-white" type="submit" (click)="checkSprint()">Clear Sprints</button>
+        <button class="w-100 p-1 m-3 bg-dark text-white" type="submit" (click)="checkSprint('delete')">Clear Sprints</button>
     </form>
    
     

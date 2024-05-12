@@ -1,8 +1,11 @@
 <div class="container">
     <header>
+        <button class="p-2 m-3 bg-dark text-white" routerLink="/main">Sprints</button>
         <button class="p-2 m-3 bg-dark text-white" (click)="addStory()">Add Story</button>
         <button class="p-2 m-3 bg-dark text-white" routerLink="/calculateSprint">calculate sprint</button>
     </header>
+
+    <h3 class="text-center">Story and point</h3>
     <div class="main" >
         <div class="rectangle" *ngFor ="let data of taskList">
             <h4>{{data.story}}</h4>

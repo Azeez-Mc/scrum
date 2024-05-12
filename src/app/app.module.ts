@@ -9,6 +9,7 @@ import { SprintTaskComponent } from './sprint-task/sprint-task.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CalculateSprintComponent } from './calculate-sprint/calculate-sprint.component';
+import { SprintStoryComponent } from './sprint-story/sprint-story.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CalculateSprintComponent } from './calculate-sprint/calculate-sprint.co
     MainComponent,
     StoryFormComponent,
     SprintTaskComponent,
-    CalculateSprintComponent
+    CalculateSprintComponent,
+    SprintStoryComponent
   ],
   imports: [
     BrowserModule,

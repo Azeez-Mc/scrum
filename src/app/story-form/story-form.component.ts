@@ -11,10 +11,7 @@ import { Router } from '@angular/router';
 })
 
 
-// interface JsonFormValidators {
-//   name: string;
-//   point: number;
-// }
+
 
 export class StoryFormComponent implements OnInit{
 
@@ -45,10 +42,14 @@ export class StoryFormComponent implements OnInit{
     if(this.submitForm.invalid) {
       return
     }else{
-      console.log('kkk', this.formValidation);
-       const formData = this.submitForm.value;
-      this.dataArrayService.updateScrum(formData);
-      this.router.navigate([''])
+      const formData = this.submitForm.value;
+      formData["date"] = new Date();
+      formData["status"] = false;
+      
+      // console.log('kkk', formData);
+
+      this.dataArrayService.creaateScrum(formData);
+      this.router.navigate(['']);
 
     }
 

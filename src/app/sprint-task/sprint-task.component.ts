@@ -29,11 +29,7 @@ export class SprintTaskComponent implements OnInit{
   }
 
   addStory() {
-    // if(this.taskList.length >= 5) {
-    //   return ;
-    // }else{
-    //   this.route.navigate(['/story-form'])
-    // }
-    this.route.navigate(['/story-form'])
+   
+    this.route.navigate(['/story-form']);
   }
  }

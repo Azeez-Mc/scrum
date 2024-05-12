@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngIf="story">
+
+        <h3 class="text-center">Auto Selected Sprint</h3>
+        <div class="main" >
+            <div class="rectangle" *ngFor ="let data of story">
+                <h4>{{data.story}}</h4>
+                <h6>Point : {{data.point}}</h6>
+            </div>
+            
+        </div>
+    
+    </div>
+</div>
