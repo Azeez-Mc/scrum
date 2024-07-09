@@ -60,11 +60,11 @@ export class CalculateSprintComponent implements OnInit {
           this.router.navigate(['/sprint-story'],{ state: { example: [result] } } ) ;     
         }else {
           this.dataArrayService.removeStory([result]);
-          this.router.navigate(['']) ; 
+          this.router.navigate(['']); 
         }
      
       } else {
-        const selectSprint:DataItem[] | null= this.findCombinations(targetValue,  this.taskList); // Pass filteredArray as an array
+        const selectSprint:DataItem[] | null= this.findCombinations(targetValue,  this.taskList);
         if(selectSprint != null){
 
           if(key =='create') {
@@ -74,10 +74,6 @@ export class CalculateSprintComponent implements OnInit {
             this.dataArrayService.removeStory(selectSprint);
             this.router.navigate(['']) ; 
           }
-
-
-
-         
         }
       }
     }
